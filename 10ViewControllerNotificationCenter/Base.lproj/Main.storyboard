@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_0ViewControllerNotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the data text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2if-A9-A23">
+                                <rect key="frame" x="112" y="323" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGw-gX-aws">
+                                <rect key="frame" x="79.5" y="394" width="216" height="30"/>
+                                <state key="normal" title="I want to use notification center"/>
+                                <connections>
+                                    <segue destination="Uj7-rq-Gfl" kind="show" id="S7J-X2-C40"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.68131068230000003" green="1" blue="0.73715553249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aGw-gX-aws" firstAttribute="top" secondItem="2if-A9-A23" secondAttribute="bottom" constant="50" id="9lL-4n-eqw"/>
+                            <constraint firstItem="2if-A9-A23" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JLO-wT-KvX"/>
+                            <constraint firstItem="aGw-gX-aws" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PvS-RA-1kh"/>
+                            <constraint firstItem="2if-A9-A23" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cg8-42-mxr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="2if-A9-A23" id="lNx-LL-ZkI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118" y="32"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="NnN-FS-q7k">
+            <objects>
+                <viewController id="Uj7-rq-Gfl" customClass="SecondViewController" customModule="_0ViewControllerNotificationCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0cK-Iz-uJ7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ey-Fs-4Bf">
+                                <rect key="frame" x="50" y="318.5" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKb-dr-18o">
+                                <rect key="frame" x="172.5" y="398.5" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.34898455160000003" blue="0.1822732443" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="btnSendData:" destination="Uj7-rq-Gfl" eventType="touchUpInside" id="bKv-m1-vA4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.69275085300000006" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aKb-dr-18o" firstAttribute="centerX" secondItem="0cK-Iz-uJ7" secondAttribute="centerX" id="7yU-mF-A65"/>
+                            <constraint firstItem="bhx-5m-gax" firstAttribute="trailing" secondItem="9ey-Fs-4Bf" secondAttribute="trailing" constant="50" id="C6j-O4-Zwq"/>
+                            <constraint firstItem="9ey-Fs-4Bf" firstAttribute="leading" secondItem="bhx-5m-gax" secondAttribute="leading" constant="50" id="Df8-OB-aKL"/>
+                            <constraint firstItem="aKb-dr-18o" firstAttribute="top" secondItem="9ey-Fs-4Bf" secondAttribute="bottom" constant="50" id="fdm-V8-SHi"/>
+                            <constraint firstItem="9ey-Fs-4Bf" firstAttribute="centerX" secondItem="0cK-Iz-uJ7" secondAttribute="centerX" id="jM7-9c-4fK"/>
+                            <constraint firstItem="9ey-Fs-4Bf" firstAttribute="centerY" secondItem="0cK-Iz-uJ7" secondAttribute="centerY" id="nU3-BQ-bqs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bhx-5m-gax"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="9ey-Fs-4Bf" id="hzw-3T-Udb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VnZ-iU-PEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="705" y="32"/>
+        </scene>
+    </scenes>
+</document>
